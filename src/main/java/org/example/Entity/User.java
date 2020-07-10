@@ -5,6 +5,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "Benutzer")
 public class User{
 
     @Id

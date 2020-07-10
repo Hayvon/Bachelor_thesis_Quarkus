@@ -1,0 +1,17 @@
+{
+  "resources":[
+    {"pattern":"\\QBPMN20.xsd\\E"}, 
+    {"pattern":"\\QMETA-INF/services/io.smallrye.config.SmallRyeConfigFactory\\E"}, 
+    {"pattern":"\\QMETA-INF/services/io.vertx.core.spi.FutureFactory\\E"}, 
+    {"pattern":"\\QMETA-INF/services/java.sql.Driver\\E"}, 
+    {"pattern":"\\QMETA-INF/services/jdk.vm.ci.hotspot.HotSpotJVMCIBackendFactory\\E"}, 
+    {"pattern":"\\QMETA-INF/services/jdk.vm.ci.services.JVMCIServiceLocator\\E"}, 
+    {"pattern":"\\QMETA-INF/services/org.eclipse.microprofile.config.spi.ConfigSource\\E"}, 
+    {"pattern":"\\QMETA-INF/services/org.eclipse.microprofile.config.spi.Converter\\E"}, 
+    {"pattern":"\\Qapplication.properties\\E"}, 
+    {"pattern":"\\Qjbossts-properties.xml\\E"}, 
+    {"pattern":"\\Qorg/camunda/bpm/engine/db/drop/activiti.h2.drop.decision.engine.sql\\E"}, 
+    {"pattern":"\\Qorg/jboss/threads/Version.properties\\E"}
+  ],
+  "bundles":[]
+}

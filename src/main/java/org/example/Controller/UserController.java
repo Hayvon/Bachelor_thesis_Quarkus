@@ -51,7 +51,6 @@ public class UserController {
     @Path("/create")
     @Transactional
     public String createUser(User newUser) throws PayloadException {
-        System.out.println(newUser.getName());
         if (newUser == null || newUser.getName() == null){
             throw new PayloadException("Payload incomplete!");
         }
