@@ -2226,6 +2226,13 @@
     "allDeclaredFields": true
   },
   {
+    "name" : "io.undertow.servlet.spec.ServletPrintWriterDelegate",
+    "allPublicConstructors": true,
+    "allPublicMethods": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
     "name": "org.camunda.bpm.engine.impl.cfg.ConfigurationLogger",
     "methods": [
       {  "name": "<init>", "parameterTypes": [] }

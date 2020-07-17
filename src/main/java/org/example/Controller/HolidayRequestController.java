@@ -76,7 +76,7 @@ public class HolidayRequestController {
     //Shows all HolidayRequests
     @GET
     @Path("/")
-     public List<HolidayRequest> allHolidayRequests() throws NoSearchResultException {
+    public List<HolidayRequest> allHolidayRequests() throws NoSearchResultException {
         List<HolidayRequest> allHolidayRequests = holidayRequestRepo.listAll();
 
         if (allHolidayRequests.isEmpty()){
@@ -89,18 +89,12 @@ public class HolidayRequestController {
     //Show Tasks for specific Holidayrequest
     @GET
     @Path("/{id}")
-    public String showHolidayRequestTask(@PathParam("id") long id) throws org.example.Exception.NotFoundException {
+    public HolidayRequest showSpecificHolidayRequest(@PathParam("id") long id) throws org.example.Exception.NotFoundException {
 
         checkExistingHolidayRequest(id);
+        holidayRequest = holidayRequestRepo.findById(id);
 
-        String taskString = "Keine Tasks zu diesem Urlaubsantrag verfügbar!";
-
-        List<Task> allTasks = taskService.createTaskQuery().processVariableValueEquals("request_id",id).list();
-
-        for (Task task: allTasks) {
-            taskString = "Task: " + task.getName() + " ID: " + task.getId() + " Assignee: " + task.getAssignee();
-        }
-        return taskString;
+        return holidayRequest;
     }
 
     //Assigning holidayrequests
@@ -240,4 +234,3 @@ public class HolidayRequestController {
 
 
 }
-

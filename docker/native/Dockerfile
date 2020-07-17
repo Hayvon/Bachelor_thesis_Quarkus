@@ -10,4 +10,5 @@ COPY src/main/resources/META-INF/native-image/org/example/code-with-quarkus/reso
 WORKDIR /home/app/quarkus
 RUN native-image -jar build/app.jar
 EXPOSE 9090
-ENTRYPOINT ["./quarkus"]
+#ENTRYPOINT ["bash"]
+ENTRYPOINT ["./micronaut"]

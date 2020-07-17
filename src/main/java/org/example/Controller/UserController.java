@@ -1,9 +1,11 @@
 package org.example.Controller;
 
+import org.example.Entity.HolidayRequest;
 import org.example.Entity.User;
 import org.example.Exception.NoSearchResultException;
 import org.example.Exception.NotFoundException;
 import org.example.Exception.PayloadException;
+import org.example.Repo.HolidayRequestRepo;
 import org.example.Repo.UserRepo;
 
 import javax.inject.Inject;
@@ -25,7 +27,7 @@ public class UserController {
     //Shows all Users
     @GET
     @Path("/")
-   public  List<User> allUsers() throws NoSearchResultException {
+    public  List<User> allUsers() throws NoSearchResultException {
         List<User> userList = userRepo.listAll();
 
        if (userList.isEmpty()){
@@ -33,6 +35,8 @@ public class UserController {
         }
         return userList;
     }
+
+
 
     //Returns specific User
     @GET
