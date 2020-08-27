@@ -61,7 +61,7 @@
    <!-- <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-jdbc-h2</artifactId>
-    </dependency> -->
+    </dependency>-->
     <dependency>
        <groupId>io.quarkus</groupId>
        <artifactId>quarkus-jdbc-postgresql</artifactId>
@@ -83,14 +83,14 @@
       <artifactId>h2</artifactId>
       <version>1.4.200</version>
     </dependency>-->
-    <dependency>
+  <dependency>
      <groupId>org.postgresql</groupId>
      <artifactId>postgresql</artifactId>
      <version>42.2.14</version>
    </dependency>
 
 
-
+<!--
     <dependency>
       <groupId>commons-logging</groupId>
       <artifactId>commons-logging-api</artifactId>
@@ -135,6 +135,8 @@
       <artifactId>hibernate-graalvm</artifactId>
       <version>5.4.12.Final</version>
     </dependency>
+    -->
+
   </dependencies>
   <build>
     <plugins>

@@ -36,6 +36,7 @@ public class HolidayRequest {
         this.status = "pending";
     }
 
+    //Getter and Setter
     public long getId() {
         return id;
     }

@@ -21,8 +21,7 @@ public class UserController {
 
    @Inject
    private UserRepo userRepo;
-
-    private User user;
+   private User user;
 
     //Shows all Users
     @GET
@@ -38,7 +37,7 @@ public class UserController {
 
 
 
-    //Returns specific User
+    //Shows specific User
     @GET
     @Path("/{id}")
     public User findUser(@PathParam("id") Long id) throws org.example.Exception.NotFoundException {

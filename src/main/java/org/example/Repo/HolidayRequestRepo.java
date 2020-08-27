@@ -5,6 +5,7 @@ import org.example.Entity.HolidayRequest;
 
 import javax.enterprise.context.ApplicationScoped;
 
+//PanacheRepository for HolidayRequests
 @ApplicationScoped
 public class HolidayRequestRepo implements PanacheRepository<HolidayRequest> {
 }

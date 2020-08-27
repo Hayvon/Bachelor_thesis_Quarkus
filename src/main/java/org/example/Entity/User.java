@@ -25,6 +25,7 @@ public class User{
         this.name = name;
     }
 
+    //Getter and Setter
     public long getUserId() {
         return userId;
     }

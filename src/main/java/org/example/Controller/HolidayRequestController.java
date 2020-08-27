@@ -1,5 +1,6 @@
 package org.example.Controller;
 
+import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.RepositoryService;
 import org.camunda.bpm.engine.RuntimeService;
@@ -15,6 +16,7 @@ import org.example.Repo.UserRepo;
 
 
 import javax.inject.Inject;
+import javax.sql.DataSource;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -86,7 +88,7 @@ public class HolidayRequestController {
         return  allHolidayRequests;
     }
 
-    //Show Tasks for specific Holidayrequest
+    //Show specific Holidayrequest
     @GET
     @Path("/{id}")
     public HolidayRequest showSpecificHolidayRequest(@PathParam("id") long id) throws org.example.Exception.NotFoundException {
@@ -97,7 +99,7 @@ public class HolidayRequestController {
         return holidayRequest;
     }
 
-    //Assigning holidayrequests
+    //Assigning specific Holidayrequest
     @POST
     @Path("/{id}/assign")
     @Transactional
@@ -129,7 +131,7 @@ public class HolidayRequestController {
         }
     }
 
-    //Approving holidayrequests
+    //Approving specific Holidayrequest
     @POST
     @Path("/{id}/approve")
     @Transactional
@@ -170,7 +172,7 @@ public class HolidayRequestController {
         }
     }
 
-    //Rejecting holidayrequest
+    //Rejecting specific Holidayrequest
     @POST
     @Path("/{id}/reject")
     @Transactional
@@ -215,7 +217,7 @@ public class HolidayRequestController {
     }
 
 
-    //Query all Tasks for a specific holidayrequest
+    //Query all Tasks for a specific Holidayrequest
     List<Task> getAllTasksForSpecificRequest(long id){
         allTasks = taskService.createTaskQuery().processVariableValueEquals("request_id",id).list();
 
@@ -226,7 +228,7 @@ public class HolidayRequestController {
         }
     }
 
-    //Updates status of holidayrequest
+    //Updates status of Holidayrequest
     void updateStatus(long id, String name, String status){
         String status2 = status + " by " + name;
         holidayRequestRepo.update("status = " + "'" + status2 + "'" + " where id = ?1", id);
